@@ -1,0 +1,22 @@
+#main-div{
+    width: 90vw;
+    height: auto;
+}
+#main-div h1 {
+    text-align: center;
+}
+#main-div table {
+    table-layout: auto;
+}
+.table th{
+    padding-left: 1.5rem;
+}
+.table th:first-child{
+    width: 50%;
+}
+.table th:last-child{
+    width: 15%;
+}
+td > a{
+    margin: 0.5em;
+}
