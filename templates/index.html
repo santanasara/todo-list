@@ -11,7 +11,7 @@
 <form method="POST" action="/">
     <label for="title">Task</label>
     <div class="input-group">
-        <input type="text" class="form-control" id="title">
+        <input type="text" class="form-control" name="content" id="content">
     <span class="input-group-btn">
         <input type="submit" value="Add Task" class="ml-2 btn btn-primary">
     </span>
@@ -23,14 +23,15 @@
         <th>Date</th>
         <th>Actions</th>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>
-            <a class="btn btn-warning "href="#">E</a>
-            <a class="btn btn-danger " href="#">X</a>
-        </td>
-        
-    </tr>
+    {% for task in tasks %}
+        <tr>
+            <td>{{task.content}}</td>
+            <td>{{task.creationDate.date()}}</td>
+            <td>
+                <a class="btn btn-warning "href="#">E</a>
+                <a class="btn btn-danger " href="/delete/{{task.id}}">X</a>
+            </td>
+        </tr>
+    {% endfor %}
 </table>
 {% endblock %}
